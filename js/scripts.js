@@ -24,23 +24,43 @@ for (i=0; i<rows.length; i++) {
 
  console.log("Array 3: " + array3); */
 
- var string = "dont compare yourself to others, compare yourself to the person you were yesterday";
+ var string = "dont";
  var capArray = string.split(" ");
  var stringHolder = capArray.join("");
  var toLetters = stringHolder.split("");
 
  console.log(toLetters);
 
+var squareRoot = Math.sqrt(stringHolder.length);
+var rows = Math.floor(squareRoot);
+var columns = (stringHolder.length / rows);
+columns = Math.round(columns);
+console.log("Rows: " + rows + " Columns: " + columns);
 
-var arrayA = ["d", "o", "n", "t", "c", "o", "m", "p"];
-var arrayB = ["a", "r", "e", "y", "o", "u", "r", "s"];
-var arrayC = ["e", "l", "f", "t", "o", "o", "t", "h"];
-var arrayD = ["d", "o", "n", "t", "c", "o", "m", "p"];
-var arrayE = ["a", "r", "e", "y", "o", "u", "r", "s"];
-var arrayF = ["e", "l", "f", "t", "o", "o", "t", "h"];
-var arrayG = ["d", "o", "n", "t", "c", "o", "m", "p"];
-var arrayH = ["a", "r", "e", "y", "o", "u", "r", "s"];
-var arrayI = ["e", "l", "f", "t", "o", "o", "t", "h"];
+var array1 = [];
+
+if(columns === 2) {
+  var slice = stringHolder.slice(0, 2);
+  // if columns === 5, arrayA.push(string.length / 5 columns)
+  array1.push(slice);
+}
+
+var tempString = array1.join("");
+var tempArray = tempString.split("");
+console.log(tempArray);
+
+// var arrayOne = ["d", "o"];
+// var arrayTwo = ["g", "e"];
+
+// var arrayA = ["d", "o", "n", "t", "c", "o", "m", "p"];
+// var arrayB = ["a", "r", "e", "y", "o", "u", "r", "s"];
+// var arrayC = ["e", "l", "f", "t", "o", "o", "t", "h"];
+// var arrayD = ["d", "o", "n", "t", "c", "o", "m", "p"];
+// var arrayE = ["a", "r", "e", "y", "o", "u", "r", "s"];
+// var arrayF = ["e", "l", "f", "t", "o", "o", "t", "h"];
+// var arrayG = ["d", "o", "n", "t", "c", "o", "m", "p"];
+// var arrayH = ["a", "r", "e", "y", "o", "u", "r", "s"];
+// var arrayI = ["e", "l", "f", "t", "o", "o", "t", "h"];
 var finalArray = [];
 
 for (i=0; i < arrayA.length; i++) {
